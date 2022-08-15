@@ -1,0 +1,337 @@
+* {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+/* HEADER */
+header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 100px;
+    z-index: 100;
+}
+header .logo {
+    position: absolute;
+    left: 7%;
+    top: 25%;
+}
+header>nav {
+    position: fixed;
+    top: 45%;
+    left: 30px;
+    z-index: 999999;
+}
+header>nav li {
+    position: relative;
+    cursor: pointer;
+    margin: 7px 0;
+}
+header>nav li span {
+    width: 5px;
+    height: 5px;
+    border-radius: 5px;
+    background-color: #000;
+    position: absolute;
+    left: -15px;
+    top: 8px;
+
+}
+header>nav li a {
+    color: black;
+}
+header .hamburger-button {
+    position: relative;
+    transition: .5s ease-in-out;
+    width: 45px;
+    height: 34px;
+    cursor: pointer;
+    left: 90%;
+    top: 30px;
+    z-index: 999;
+}
+header .hamburger-button.active {
+    left: 48.5%;
+}
+header .hamburger-button span {
+    position: absolute;
+    height: 3px;
+    border-radius: 2px;
+    width: 45px;
+    background-color: #fff;
+    top: 0;
+    transition: .8s;
+    box-shadow: 3px 3px 10px #333;
+}
+header .hamburger-button span:nth-child(1) {
+    top: 0;
+}
+header .hamburger-button span:nth-child(2),
+header .hamburger-button span:nth-child(3) {
+    top: 10px;
+}
+header .hamburger-button span:nth-child(3) {
+    background-color: #E80A4D;
+}
+header .hamburger-button span:nth-child(4) {
+    top: 20px;
+}
+
+header .hamburger-button.active span:nth-child(1),
+header .hamburger-button.active span:nth-child(4) {
+    opacity: 0;
+}
+header .hamburger-button.active span:nth-child(2) {
+    transform: rotate(45deg);
+}
+header .hamburger-button.active span:nth-child(3) {
+    transform: rotate(-45deg);
+    background-color: #fff;
+}
+
+header .overlay {
+    position: fixed;
+    background: rgba(0, 0, 0, .8);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    display:  flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+    opacity: 0;
+}
+header .overlay nav ul li {
+    margin: 2rem 0;
+    text-align: center;
+    opacity: 0;
+}
+header .overlay nav ul li a {
+    color: #fff;
+    font-size: 35px;
+}
+header .overlay nav ul li a:hover {
+    color: #E80A4D;
+}
+
+@keyframes fadeInLeft{
+    0% {opacity: 0; transform: translateX(-25%);}
+    100% {opacity: 1; transform: translateX(0);}
+}
+
+header .overlay.overflow {
+    height: 100%;
+    opacity: 1;
+} 
+header .overlay.overflow nav ul li {
+    animation: fadeInLeft 0.5s ease forwards;
+} 
+header .overlay.overflow nav ul li:nth-child(1) {
+    animation-delay: .2s;
+}
+header .overlay.overflow nav ul li:nth-child(2) {
+    animation-delay: .25s;
+}
+header .overlay.overflow nav ul li:nth-child(3) {
+    animation-delay: .3s;
+}
+header .overlay.overflow nav ul li:nth-child(4) {
+    animation-delay: .35s;
+}
+header .overlay.overflow nav ul li:nth-child(5) {
+    animation-delay: .4s;
+}
+
+/* HEADER END */
+
+/* FULLPAGES */
+
+/* SECTION1 */
+#section01{
+    overflow: hidden;
+}
+
+
+/* SECTION02 */
+#fullpage>.page02>h1 {
+    position: absolute;
+    bottom: 380px;
+    left: 270px;
+    font-size: 80px;
+    font-weight: 500;
+    color: #E80A4D;
+    margin-bottom: 30px;
+}
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+.swiper .contentText {
+    position: absolute;
+    bottom: 220px;
+    left: 280px;
+}
+.swiper .contentText h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.swiper-button-prev,.swiper-button-next {
+    right: auto;
+    left: 48%;
+    top: 83%;
+    z-index: 9999999;
+    width: 80px;
+    height: 80px;
+    border-radius: 100px;
+    border: 1px solid black;
+}
+.swiper-button-prev:hover,.swiper-button-next:hover {
+    border: none;
+    background-color: #E80A4D;
+}
+.swiper-button-prev:hover .sprite .fa-solid,.swiper-button-next:hover .sprite .fa-solid {
+    color: #fff;
+}
+.swiper-button-prev {
+    margin-left: -90px;
+}
+.sprite .fa-solid {
+    font-size: 30px;
+    color: #333;
+}
+.swiper2 {
+    position: absolute;
+    width: 58%;
+    height: 100%;
+    right: 0;
+}
+.swiper2 .swiper-slide {
+    height: 50%;
+    top: 280px;
+    background: none !important;   
+}
+
+.swiper2 .swiper-slide2 img {
+    width: 300px;
+    height: 450px;
+}
+.swiper2 .swiper-slide2.active {
+    transform: scale(1.3);
+}
+.swiper-button-prev:after, .swiper-container-rtl, .swiper-button-next:after {
+    content: '';
+}  
+
+
+/* SECTION03 */
+.clientPage {
+    width: 100%;
+    display: flex;
+    position: relative;
+    background: url("/img/Group\ 5.jpg");
+}
+.clientPage .clientText{
+    width: 50%;
+    height: 100vh;
+}
+.clientPage .clientText h1{
+    color: #E80A4D;
+    position: absolute;
+    left: 150px;
+    top: 300px;
+    font-size: 80px;
+    font-weight: 500;
+    letter-spacing: 5px;
+}
+.clientPage .clientText h1::after{
+    content: "";
+    position: absolute;
+    top: 80px;
+    left: 300px;
+    width: 0;
+    height: 4px;
+    background-color: #E80A4D;
+    transition: 1s;
+}
+.clientPage .clientText h1::after.active{
+    width: 450px;
+    content: "";
+    position: absolute;
+    top: 80px;
+    left: 300px;
+    height: 4px;
+    background-color: #E80A4D;
+    transition: 1s;
+}
+.clientPage .clientText p{
+    position: absolute;
+    left: 150px;
+    top: 420px;
+    font-size: 22px;
+    letter-spacing: 3px;
+    color: #FFF;
+}
+.clientPage .clientText p span{
+    color: #E80A4D;
+    font-weight: bold;
+}
+.clientPage .clientText a{
+    display: block;
+    position: absolute;
+    left: 150px;
+    width: 250px;
+    height: 50px;
+    background-color: #E80A4D;
+    color: #FFF;
+    top: 540px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50px;
+
+}
+.clientPage .scrollBox {
+    width: 50%;
+    background-color: rgba(232, 10, 77, 0.7);
+    height: 100vh;
+    overflow: auto;
+    border-radius: 50px;
+    box-shadow: -10px 0 50px #FFF;
+}
+
+.clientPage .scrollBox::-webkit-scrollbar {
+    display: none; 
+  }
+.clientPage .scrollBox .client{
+    position: relative;
+    width: 80%;
+    margin: 40px auto;
+    height: 100px;
+    background-color: #FFF;
+    border-radius: 50px;
+    padding-left: 10%;
+    line-height: 100px;
+    font-size: 40px;
+    box-shadow: 5px, 10px, 4px, #333;
+    animation: scrollAni 25s infinite;
+
+}
+
+@keyframes scrollAni {
+    0% {transform: translateY(0);}
+    100% {transform: translateY(-4200px);}
+}
+.clientPage .scrollBox .client span{
+    width: 50px;
+    height: 50px;
+    background-color: #E80A4D;
+    border-radius: 50px;
+    position: absolute;
+    left: 20px;
+    top: 25%;
+
+}
