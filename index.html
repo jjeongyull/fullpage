@@ -8,13 +8,11 @@
     <link rel="stylesheet" href="/fullpage/jquery.fullPage.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <script defer src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <link rel="stylesheet" href="/main.css">
+    
     <script src="https://kit.fontawesome.com/5c4a482ffe.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js" integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="/fullpage/jquery.fullPage.js"></script>
+    <link rel="stylesheet" href="/main.css">
     <script defer src="/js/main.js"></script>
 </head>
 <body>
@@ -140,54 +138,63 @@
             <div class="clientPage">
                 <div class="clientText">
                     <h1>CLIENT</h1>
+                    <div class="bar">
+                    </div>
                     <p>
                         그 동안 <span>애드아이티</span>와 함께<br/>
                         더 나은 가치를 만들어간 고객사입니다.
                     </p>
-                    <a href="#">WORK MORE</a>
+                    <a href="#">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        WORK MORE</a>
                 </div>
-                <div class="scrollBox">
-                    <div class="client"><span></span>CLIENT</div>
-                    <div class="client"><span></span>CLIENT</div>
-                    <div class="client"><span></span>CLIENT</div>
-                    <div class="client"><span></span>CLIENT</div>
-                    <div class="client"><span></span>CLIENT</div>
-                    <div class="client"><span></span>CLIENT</div>
-                    <div class="client"><span></span>CLIENT</div>
-                    <div class="client"><span></span>CLIENT</div>
-                    <div class="client"><span></span>CLIENT</div>
-                    <div class="client"><span></span>CLIENT</div>
-                    <div class="client"><span></span>CLIENT</div>
-                    <div class="client"><span></span>CLIENT</div>
-                    <div class="client"><span></span>CLIENT</div>
-                    <div class="client"><span></span>CLIENT</div>
-                    <div class="client"><span></span>CLIENT</div>
-                    <div class="client"><span></span>CLIENT</div>
-                    <div class="client"><span></span>CLIENT</div>
-                    <div class="client"><span></span>CLIENT</div>
-                    <div class="client"><span></span>CLIENT</div>
-                    <div class="client"><span></span>CLIENT</div>
-                    <div class="client"><span></span>CLIENT</div>
-                    <div class="client"><span></span>CLIENT</div>
-                    <div class="client"><span></span>CLIENT</div>
-                    <div class="client"><span></span>CLIENT</div>
-                    <div class="client"><span></span>CLIENT</div>
-                    <div class="client"><span></span>CLIENT</div>
-                    <div class="client"><span></span>CLIENT</div>
-                    <div class="client"><span></span>CLIENT</div>
-                    <div class="client"><span></span>CLIENT</div>
-                    <div class="client"><span></span>CLIENT</div>
-                    <div class="client"><span></span>CLIENT</div>
-                    <div class="client"><span></span>CLIENT</div>
-                    <div class="client"><span></span>CLIENT</div>
-                    <div class="client"><span></span>CLIENT</div>
-                    <div class="client"><span></span>CLIENT</div>
-                    <div class="client"><span></span>CLIENT</div>
-                    <div class="client"><span></span>CLIENT</div>
-                    <div class="client"><span></span>CLIENT</div>
-                    <div class="client"><span></span>CLIENT</div>
-                    <div class="client"><span></span>CLIENT</div>
-                    <div class="client"><span></span>CLIENT</div>
+                <div class="scrollBox" id="target">
+                    <div class="clients">
+                        <div class="client"><span></span>CLIENT</div>
+                        <div class="client"><span></span>CLIENT</div>
+                        <div class="client"><span></span>CLIENT</div>
+                        <div class="client"><span></span>CLIENT</div>
+                        <div class="client"><span></span>CLIENT</div>
+                        <div class="client"><span></span>CLIENT</div>
+                        <div class="client"><span></span>CLIENT</div>
+                        <div class="client"><span></span>CLIENT</div>
+                        <div class="client"><span></span>CLIENT</div>
+                        <div class="client"><span></span>CLIENT</div>
+                        <div class="client"><span></span>CLIENT</div>
+                        <div class="client"><span></span>CLIENT</div>
+                        <div class="client"><span></span>CLIENT</div>
+                        <div class="client"><span></span>CLIENT</div>
+                        <div class="client"><span></span>CLIENT</div>
+                        <div class="client"><span></span>CLIENT</div>
+                        <div class="client"><span></span>CLIENT</div>
+                        <div class="client"><span></span>CLIENT</div>
+                        <div class="client"><span></span>CLIENT</div>
+                        <div class="client"><span></span>CLIENT</div>
+                        <div class="client"><span></span>CLIENT</div>
+                        <div class="client"><span></span>CLIENT</div>
+                        <div class="client"><span></span>CLIENT</div>
+                        <div class="client"><span></span>CLIENT</div>
+                        <div class="client"><span></span>CLIENT</div>
+                        <div class="client"><span></span>CLIENT</div>
+                        <div class="client"><span></span>CLIENT</div>
+                        <div class="client"><span></span>CLIENT</div>
+                        <div class="client"><span></span>CLIENT</div>
+                        <div class="client"><span></span>CLIENT</div>
+                        <div class="client"><span></span>CLIENT</div>
+                        <div class="client"><span></span>CLIENT</div>
+                        <div class="client"><span></span>CLIENT</div>
+                        <div class="client"><span></span>CLIENT</div>
+                        <div class="client"><span></span>CLIENT</div>
+                        <div class="client"><span></span>CLIENT</div>
+                        <div class="client"><span></span>CLIENT</div>
+                        <div class="client"><span></span>CLIENT</div>
+                        <div class="client"><span></span>CLIENT</div>
+                        <div class="client"><span></span>CLIENT</div>
+                        <div class="client"><span></span>CLIENT</div>
+                    </div>
                 </div>
             </div>
         </div>

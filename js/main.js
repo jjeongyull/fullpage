@@ -8,10 +8,24 @@ $(function(){
 		anchors:['section1', 'section2', 'section3','section4'],
 		controlArrows: false,
 		verticalCentered: false,
-		afterLoad: function(anchorLink, index){
-			
-			
-		}
+		'afterLoad': function(anchorLink, index){
+			if (index == 1) {
+				$('.navigation li a').removeClass('active');
+				$('.navigation li span').removeClass('active');	
+		} else if(index == 2) {
+			$('.navigation li a').removeClass('active');
+			$('.navigation li span').removeClass('active');	
+			$('.clientPage .clientText .bar').removeClass('active');
+		} else if (index == 3) {
+			$('.clientPage .clientText .bar').addClass('active');		
+			$('.navigation li a').addClass('active');		
+			$('.navigation li span').addClass('active');		
+		} else  if(index == 4){
+			$('.navigation li a').removeClass('active');
+			$('.navigation li span').removeClass('active');	
+			$('.clientPage .clientText .bar').removeClass('active');
+		};
+	}
 		
 	});
 
@@ -21,16 +35,24 @@ $(function(){
 
 	});
 
-	const swiper = new Swiper('.swiper', {
+	const animation = document.querySelectorAll(".clientPage .scrollBox .clients")
+	$(document).ready(function(){
+		$(".scrollBox").hover(function(){
+			$(animation).addClass('active');
+		},
+			function(){
+				$(animation).removeClass('active');
+			});
+			});
+
+
+
+
+	const swiper = new Swiper('.swiper-no-swiping', {
 		// Optional parameters
 		direction: 'horizontal',
 		loop: true,
-	  
-		// If we need pagination
-		pagination: {
-		  el: '.swiper-pagination',
-		  clickable: true
-		},
+		loopAdditionalSlides: 1,
 	  
 		// Navigation arrows
 		navigation: {
@@ -42,6 +64,7 @@ $(function(){
 		// Optional parameters
 		direction: 'horizontal',
 		loop: true,
+		loopAdditionalSlides: 1,
 		slidesPerView: 3,
         spaceBetween: 30,
         navigation: {
